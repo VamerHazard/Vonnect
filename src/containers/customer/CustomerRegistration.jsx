@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './customerRegistration.css';
 import {Link} from 'react-router-dom';
 import nepalFlag from '../../assets/nepalFlag.png';
+import classNames from 'classnames';
 
 const CustomerRegistration = () => {
 
@@ -25,12 +26,12 @@ const CustomerRegistration = () => {
           <img src={nepalFlag}/>
           <input type='number' onChange={handleChange} placeholder='Phone-Number' maxLength={10}/>
         </div>
-        {limited && (
-        <div className='vonnect__customerRegistration-container__btn'>
+        <div className={classNames('vonnect__customerRegistration-container__btn',{
+        'vonnect__customerRegistration-container__btn-color': limited})}>
         <Link to={`/CustomerRegistration/${number}`}>
           <button type='button'>Submit</button>
         </Link>
-      </div>)}
+      </div>
     </div>
   )
 }

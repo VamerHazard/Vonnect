@@ -39,7 +39,7 @@
 }
 
 .vonnect__customerRegistration-container__btn button{
-    background: var(--gradient-bar);
+    background-color: black;
     border-radius: 40px;
     border: none;
     outline: none;
@@ -56,6 +56,10 @@
     color: white;
     
     padding: 0.5rem 1rem;
+}
+
+.vonnect__customerRegistration-container__btn-color{
+  background: var(--gradient-bg) !important;
 }
 
 .vonnect__menuContainer{
