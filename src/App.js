@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
+import {Blog, Features, Footer, Header, Possibility, WhatGPT3, LoadPage, TypeReg, CustomerRegistration, CompanyRegistration, CustomerRegistrationOTP} from './containers';
+import {CTA, Brand, Navbar} from './components';
 import './App.css';
+import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 
-function App() {
+const App = () => {
+
+const [loading, setloading] = useState(false);
+
+useEffect(()=>{
+  setloading(true)
+  setTimeout(()=>{setloading(false)}, 3000)
+}, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className = 'App'>
+     {loading ? <LoadPage/> 
+    : <Routes>
+            <Route path='/' element={<TypeReg/>}/>  
+            <Route path='/CustomerRegistration' element={<CustomerRegistration/>}/>
+            <Route path='/CustomerRegistration/:id' element={<CustomerRegistrationOTP/>}/>
+    </Routes>}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
+
+ /* 
+      <div className = "gradient__bg">
+        <Navbar/>
+        <Header/>
+      </div>
+      <Brand/>
+      <WhatGPT3/>
+      <Features/>
+      <Possibility/>
+      <CTA />
+      <Blog/>
+      <Footer/>*/
