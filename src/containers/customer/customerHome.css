@@ -1,0 +1,14 @@
+.vonnect__customerHome__services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.vonnect__serviceChoice__content{display: flex; border: 1px solid black; padding-top: 50px;}
+
+.vonnect__serviceChoice-container {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {Blog, Features, Footer, Header, Possibility, WhatGPT3, LoadPage, TypeReg, CustomerRegistration, CompanyRegistration, CustomerRegistrationOTP} from './containers';
-import {CTA, Brand, Navbar} from './components';
+import {LoadPage, TypeReg, CustomerRegistration, CompanyRegistration, CustomerRegistrationOTP, CustomerHome} from './containers';
+import {ProfileEdit} from './components';
 import './App.css';
 import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 
@@ -20,6 +20,9 @@ useEffect(()=>{
             <Route path='/' element={<TypeReg/>}/>  
             <Route path='/CustomerRegistration' element={<CustomerRegistration/>}/>
             <Route path='/CustomerRegistration/:id' element={<CustomerRegistrationOTP/>}/>
+            {/*temporary route to component: */} 
+            <Route path='/CustomerRegistration/:id/profileEdit' element={<ProfileEdit/>}/>
+            <Route path='/home' element={<CustomerHome/>}/>
     </Routes>}
     </div>
   )

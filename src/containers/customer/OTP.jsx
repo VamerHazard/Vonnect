@@ -30,7 +30,7 @@ const CustomerRegistrationOTP = () => {
        
           {limited && (
            <div className='vonnect__customerRegistration-container__btn'>
-              <Link to=''>
+              <Link to='/CustomerRegistration/:id/profileEdit'>
                 <button type='button'>Verify</button>
               </Link>
           </div>

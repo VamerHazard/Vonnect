@@ -1,5 +1,6 @@
 .vonnect__customerRegistration-container{
   display:flex;
+ 
   width: 100vw;
   height: 100vh;
   flex-direction: column;
@@ -39,7 +40,7 @@
 }
 
 .vonnect__customerRegistration-container__btn button{
-    background-color: black;
+    background: black;
     border-radius: 40px;
     border: none;
     outline: none;
@@ -58,8 +59,8 @@
     padding: 0.5rem 1rem;
 }
 
-.vonnect__customerRegistration-container__btn-color{
-  background: var(--gradient-bg) !important;
+.vonnect__customerRegistration-container__btn-color button{
+  background: var(--gradient-bar);
 }
 
 .vonnect__menuContainer{

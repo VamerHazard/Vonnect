@@ -11,16 +11,15 @@ const CustomerRegistration = () => {
 
   const handleChange = (e) => {
     setNumber(e.target.value);
-    if(number.toString().length == 9) {
+    if(e.target.value.length === 10) {
       setLimited(true);
-      console.log(limited);
-    } else {setLimited(false); console.log(limited);}
+    } else {setLimited(false);}
   }
 
   return (
     <div className = 'vonnect__customerRegistration-container'>
       <div className='vonnect__customerRegistration-container__header'>
-      <h1>Sign in: </h1>
+        <h1>Sign in: </h1>
       </div>
         <div className='vonnect__customerRegistration-container__input'>
           <img src={nepalFlag}/>
